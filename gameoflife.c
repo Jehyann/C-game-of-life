@@ -209,10 +209,10 @@ void save_grid(int grid[WIDTH][HEIGHT], char* filename) {
     FILE* file = fopen(filename, "w");
     for (int i = 0; i < WIDTH; i++) {
         for (int j = 0; j < HEIGHT; j++) {
-            fprintf(file, "%c ", grid[i][j]);
+            fprintf(file, "%d ", grid[i][j]);
         }
         fprintf(file, "\n");
     }
     fclose(file);
-    printf("Grid saved here : %d\n", filename);
+    printf("Grid saved here : %s\n", filename);
 }
